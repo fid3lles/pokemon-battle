@@ -1,0 +1,46 @@
+/* Variables */
+:root {
+    --text-color: #484848;
+    --background-color: #161616;
+}
+
+/* Font configuration */
+@font-face {
+    font-family: 'FireRed';
+    src: url('/src/font/Pokemon Classic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'FireRed';
+    font-style: normal;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 112px 48px;
+    min-width: 240px;
+    min-height: 160px;
+}
+
+.battle_wrapper {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-image: url('/src/img/battle/bg_05.jpg');
+    background-repeat: no-repeat;
+}
+
+.dialogue_box {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background-image: url('/src/img/battle/dialogue-frame_06.jpg');
+}
