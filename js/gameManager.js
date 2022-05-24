@@ -30,3 +30,13 @@ function getPokeStatusValueByName(pokeObj, statusName){
         }
     })
 }
+
+function generateTrainersPokemon(){
+    return {
+        name: ,
+        type: ,
+        lvl: ,
+        stats: ,
+        
+    }
+}
