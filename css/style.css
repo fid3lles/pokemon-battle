@@ -33,6 +33,7 @@ body {
 }
 
 .battle_wrapper {
+    z-index: 0;
     grid-row-start: 1;
     grid-row-end: 2;
     background-image: url('/src/img/battle/bg_05.jpg');
@@ -40,7 +41,26 @@ body {
 }
 
 .dialogue_box {
+    z-index: 2;
     grid-row-start: 2;
     grid-row-end: 3;
     background-image: url('/src/img/battle/dialogue-frame_06.jpg');
+}
+
+.trainer_pokemon_wrapper {
+    z-index: 1;
+    position: relative;
+    right: -25px;
+    top: 58px;
+    height: 96px;
+    width: 96px;
+}
+
+.enemy_pokemon_wrapper {
+    z-index: 1;
+    position: relative;
+    right: -145px;
+    top: -79px;
+    height: 96px;
+    width: 96px;
 }

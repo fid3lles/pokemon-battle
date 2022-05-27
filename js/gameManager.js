@@ -2,8 +2,8 @@ var trainerPkmn;
 var enemyPkmn;
 
 async function startNewGame(trainerPkmnName, enemyPkmnName){
-    trainerPkmn = await getPokemonObj(trainerPkmnName);
-    enemyPkmn = await getPokemonObj(enemyPkmnName);
+    trainerPkmn = generateTrainerPokemonObj(await getPokemonObj(trainerPkmnName));
+    enemyPkmn = generateTrainerPokemonObj(await getPokemonObj(enemyPkmnName));
 
     console.log(trainerPkmn);
     console.log(enemyPkmn);
@@ -31,12 +31,18 @@ function getPokeStatusValueByName(pokeObj, statusName){
     })
 }
 
-function generateTrainersPokemon(){
+async function generateTrainerPokemonObj(pokeObj){
+
+    var types = [];
+
+    pokeObj.types.forEach(function(e) {
+        types.push(e.type);
+    });   
+
     return {
-        name: ,
-        type: ,
-        lvl: ,
-        stats: ,
-        
+        name: pokeObj.name,
+        type: types,
+        lvl: 50,
+        stats: pokeObj.stats
     }
 }
